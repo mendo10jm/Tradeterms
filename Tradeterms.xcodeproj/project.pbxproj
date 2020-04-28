@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D9B78541245820DD000DB5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B78540245820DD000DB5AF /* AppDelegate.swift */; };
-		D9B78543245820DD000DB5AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B78542245820DD000DB5AF /* ViewController.swift */; };
+		D9B78543245820DD000DB5AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B78542245820DD000DB5AF /* HomeViewController.swift */; };
 		D9B78546245820DD000DB5AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B78544245820DD000DB5AF /* Main.storyboard */; };
 		D9B78549245820DD000DB5AF /* Tradeterms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B78547245820DD000DB5AF /* Tradeterms.xcdatamodeld */; };
 		D9B7854B245820DE000DB5AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B7854A245820DE000DB5AF /* Assets.xcassets */; };
 		D9B7854E245820DE000DB5AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B7854C245820DE000DB5AF /* LaunchScreen.storyboard */; };
 		D9B78559245820DE000DB5AF /* TradetermsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B78558245820DE000DB5AF /* TradetermsTests.swift */; };
+		D9FC19C72458881300A3E9B2 /* ISViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC19C62458881300A3E9B2 /* ISViewController.swift */; };
+		D9FC19C92458903E00A3E9B2 /* RViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC19C82458903E00A3E9B2 /* RViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,7 @@
 /* Begin PBXFileReference section */
 		D9B7853D245820DD000DB5AF /* Tradeterms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tradeterms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B78540245820DD000DB5AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9B78542245820DD000DB5AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9B78542245820DD000DB5AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B78545245820DD000DB5AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B78548245820DD000DB5AF /* Tradeterms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tradeterms.xcdatamodel; sourceTree = "<group>"; };
 		D9B7854A245820DE000DB5AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		D9B78554245820DE000DB5AF /* TradetermsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradetermsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B78558245820DE000DB5AF /* TradetermsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradetermsTests.swift; sourceTree = "<group>"; };
 		D9B7855A245820DE000DB5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9FC19C62458881300A3E9B2 /* ISViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISViewController.swift; sourceTree = "<group>"; };
+		D9FC19C82458903E00A3E9B2 /* RViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				D9B78540245820DD000DB5AF /* AppDelegate.swift */,
-				D9B78542245820DD000DB5AF /* ViewController.swift */,
+				D9B78542245820DD000DB5AF /* HomeViewController.swift */,
+				D9FC19C82458903E00A3E9B2 /* RViewController.swift */,
+				D9FC19C62458881300A3E9B2 /* ISViewController.swift */,
 				D9B78544245820DD000DB5AF /* Main.storyboard */,
 				D9B7854A245820DE000DB5AF /* Assets.xcassets */,
 				D9B7854C245820DE000DB5AF /* LaunchScreen.storyboard */,
@@ -200,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B78543245820DD000DB5AF /* ViewController.swift in Sources */,
+				D9FC19C72458881300A3E9B2 /* ISViewController.swift in Sources */,
+				D9B78543245820DD000DB5AF /* HomeViewController.swift in Sources */,
+				D9FC19C92458903E00A3E9B2 /* RViewController.swift in Sources */,
 				D9B78541245820DD000DB5AF /* AppDelegate.swift in Sources */,
 				D9B78549245820DD000DB5AF /* Tradeterms.xcdatamodeld in Sources */,
 			);
