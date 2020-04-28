@@ -1,20 +1,14 @@
 //
 //  ViewController.swift
-//  Tradeterms
+//  CustomUIButton
 //
-//  Created by Jose Manuel Mendoza Marín on 28/04/2020.
-//  Copyright © 2020 JoseManuelYPablo. All rights reserved.
+//  Created by Sean Allen on 2/2/19.
+//  Copyright © 2019 Sean Allen. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
+    
 }
 
