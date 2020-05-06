@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="2816.8000000000002" y="706.59670164917543"/>
         </scene>
-        <!--RecuperarContrasena-->
+        <!--Recuperar-->
         <scene sceneID="z0w-Uk-1ZP">
             <objects>
-                <viewController storyboardIdentifier="RCViewController" title="RecuperarContrasena" id="GbZ-wF-2Jo" customClass="RCViewController" customModule="Tradeterms" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RCViewController" title="Recuperar" id="GbZ-wF-2Jo" customClass="RCViewController" customModule="Tradeterms" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZYr-N2-b8o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
