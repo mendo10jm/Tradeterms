@@ -10,15 +10,14 @@ import UIKit
 
 class ISViewController: UIViewController {
     //MARK: Properties
-    
-    @IBAction func GoRCViewController(_ sender: Any) {
-        self.performSegue(withIdentifier: "GoRCSegue", sender: self)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     //MARK: Actions
-    
+    @IBAction func GoRecuperarContrasena(_ sender: Any) {
+        self.performSegue(withIdentifier: "RecuperarContrasenaSegue", sender: self)
+
+    }
 }
