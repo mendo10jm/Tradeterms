@@ -20,4 +20,8 @@ class ISViewController: UIViewController {
         self.performSegue(withIdentifier: "RecuperarContrasenaSegue", sender: self)
 
     }
+
+    @IBAction func GoPPrincipal(_ sender: Any) {
+        self.performSegue(withIdentifier: "PPrincipalLoginSegue", sender: self)
+    }
 }

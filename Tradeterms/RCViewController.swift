@@ -16,7 +16,10 @@ class RCViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func GoLoginEnviarEmail(_ sender: Any) {
+        self.performSegue(withIdentifier: "EnviarEmailSegue", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

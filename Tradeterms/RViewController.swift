@@ -22,4 +22,8 @@ class RViewController: UIViewController {
         self.performSegue(withIdentifier: "pruebasegue", sender: self)
     }
     
+    
+    @IBAction func GoPPrincipalCrearCuenta(_ sender: Any) {
+        self.performSegue(withIdentifier: "PPrincipalRegistroSegue", sender: self)
+    }
 }
