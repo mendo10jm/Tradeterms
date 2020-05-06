@@ -145,6 +145,9 @@
                                 <state key="normal" title="¿Olvidaste tu contraseña?">
                                     <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="GoRecuperarContrasena:" destination="lla-f7-BQ0" eventType="touchUpInside" id="jy5-XD-QDk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -167,10 +170,69 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zhX-JH-E0J"/>
                     </view>
+                    <connections>
+                        <segue destination="GbZ-wF-2Jo" kind="show" identifier="RecuperarContrasenaSegue" id="OeT-LA-8M4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoO-LO-0cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2816.8000000000002" y="706.59670164917543"/>
+        </scene>
+        <!--RecuperarContrasena-->
+        <scene sceneID="z0w-Uk-1ZP">
+            <objects>
+                <viewController storyboardIdentifier="RCViewController" title="RecuperarContrasena" id="GbZ-wF-2Jo" customClass="RCViewController" customModule="Tradeterms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZYr-N2-b8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yse-Xi-kaZ">
+                                <rect key="frame" x="20" y="246" width="335" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rw-9y-eeW">
+                                <rect key="frame" x="20" y="356" width="335" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.49034621880000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escribe tu direccion email y te enviaremos un correo con los pasos para cambiar tu contraseña" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF9-xe-uvp">
+                                <rect key="frame" x="20" y="105" width="335" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yse-Xi-kaZ" firstAttribute="leading" secondItem="HVO-sm-4MQ" secondAttribute="leading" constant="20" id="94a-Do-2Dw"/>
+                            <constraint firstItem="tF9-xe-uvp" firstAttribute="top" secondItem="HVO-sm-4MQ" secondAttribute="top" constant="41" id="ACn-f1-jr7"/>
+                            <constraint firstItem="tF9-xe-uvp" firstAttribute="leading" secondItem="HVO-sm-4MQ" secondAttribute="leading" constant="20" id="B0A-bL-Eu4"/>
+                            <constraint firstItem="5Rw-9y-eeW" firstAttribute="leading" secondItem="HVO-sm-4MQ" secondAttribute="leading" constant="20" id="F6m-dU-tgb"/>
+                            <constraint firstItem="yse-Xi-kaZ" firstAttribute="centerX" secondItem="ZYr-N2-b8o" secondAttribute="centerX" id="FtJ-Nv-VIc"/>
+                            <constraint firstItem="HVO-sm-4MQ" firstAttribute="trailing" secondItem="5Rw-9y-eeW" secondAttribute="trailing" constant="20" id="Q1V-pH-JTG"/>
+                            <constraint firstItem="HVO-sm-4MQ" firstAttribute="trailing" secondItem="yse-Xi-kaZ" secondAttribute="trailing" constant="20" id="Tgg-2X-KnR"/>
+                            <constraint firstItem="5Rw-9y-eeW" firstAttribute="centerX" secondItem="ZYr-N2-b8o" secondAttribute="centerX" id="dWU-e5-u9p"/>
+                            <constraint firstItem="yse-Xi-kaZ" firstAttribute="top" secondItem="tF9-xe-uvp" secondAttribute="bottom" constant="80" id="g65-Xd-gtM"/>
+                            <constraint firstItem="tF9-xe-uvp" firstAttribute="centerX" secondItem="ZYr-N2-b8o" secondAttribute="centerX" id="jQ4-Lj-4Zm"/>
+                            <constraint firstItem="5Rw-9y-eeW" firstAttribute="top" secondItem="yse-Xi-kaZ" secondAttribute="bottom" constant="80" id="l32-Jo-7r2"/>
+                            <constraint firstItem="HVO-sm-4MQ" firstAttribute="trailing" secondItem="tF9-xe-uvp" secondAttribute="trailing" constant="20" id="t5k-wa-GQT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HVO-sm-4MQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zd2-nK-DNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3981.5999999999999" y="734.48275862068976"/>
         </scene>
         <!--Registro-->
         <scene sceneID="Nnt-jH-pxh">
@@ -181,9 +243,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGC-Ek-fjt">
-                                <rect key="frame" x="119" y="515" width="137" height="26"/>
+                                <rect key="frame" x="62.5" y="515" width="250" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="¿Olvidaste tu contraseña?">
+                                <state key="normal" title="Al crear una cuenta, aceptas nuestros Términos">
                                     <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </state>
                             </button>
@@ -191,7 +253,7 @@
                                 <rect key="frame" x="20" y="438" width="335" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Entrar">
+                                <state key="normal" title="Crear cuenta">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -257,6 +319,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGR-fM-CR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2944.8000000000002" y="-99.400299850074973"/>
+        </scene>
+        <!--PPrincipal-->
+        <scene sceneID="Uii-FX-aXO">
+            <objects>
+                <viewController storyboardIdentifier="PPrincipalViewController" title="PPrincipal" id="83r-oC-Azx" customClass="PPrincipalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nsv-SJ-m8V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gAD-ji-32W"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idj-pi-9Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3783" y="-125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GFw-XU-3GW">

@@ -18,5 +18,8 @@ class RViewController: UIViewController {
     
     //MARK: Actions
     
+    @IBAction func GoPrueba(_ sender: Any) {
+        self.performSegue(withIdentifier: "pruebasegue", sender: self)
+    }
     
 }

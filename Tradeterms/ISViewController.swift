@@ -10,13 +10,14 @@ import UIKit
 
 class ISViewController: UIViewController {
     //MARK: Properties
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     //MARK: Actions
-    
-    
+    @IBAction func GoRecuperarContrasena(_ sender: Any) {
+        self.performSegue(withIdentifier: "RecuperarContrasenaSegue", sender: self)
+
+    }
 }
