@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496ADB372464890D006D0105 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496ADB362464890D006D0105 /* RatingControl.swift */; };
 		49BB79262461CCCB00802182 /* RCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB79252461CCCB00802182 /* RCViewController.swift */; };
 		D9B0C7CF2464241200925C91 /* PerteneciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7CE2464241200925C91 /* PerteneciasViewController.swift */; };
 		D9B0C7D724643E2B00925C91 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7D624643E2B00925C91 /* ArtViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		496ADB362464890D006D0105 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		49BB79252461CCCB00802182 /* RCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCViewController.swift; sourceTree = "<group>"; };
 		D9B0C7CE2464241200925C91 /* PerteneciasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerteneciasViewController.swift; sourceTree = "<group>"; };
 		D9B0C7D624643E2B00925C91 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				49BB79252461CCCB00802182 /* RCViewController.swift */,
 				D9B0C7CE2464241200925C91 /* PerteneciasViewController.swift */,
 				D9B0C7D624643E2B00925C91 /* ArtViewController.swift */,
+				496ADB362464890D006D0105 /* RatingControl.swift */,
 				D9B78544245820DD000DB5AF /* Main.storyboard */,
 				D9B7854A245820DE000DB5AF /* Assets.xcassets */,
 				D9B7854C245820DE000DB5AF /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 				D9FC19C72458881300A3E9B2 /* ISViewController.swift in Sources */,
 				D9B78543245820DD000DB5AF /* HomeViewController.swift in Sources */,
 				D9FC19C92458903E00A3E9B2 /* RViewController.swift in Sources */,
+				496ADB372464890D006D0105 /* RatingControl.swift in Sources */,
 				49BB79262461CCCB00802182 /* RCViewController.swift in Sources */,
 				D9B0C7CF2464241200925C91 /* PerteneciasViewController.swift in Sources */,
 				D9B78541245820DD000DB5AF /* AppDelegate.swift in Sources */,
