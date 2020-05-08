@@ -23,14 +23,14 @@ class ArticuloTableViewController: UITableViewController {
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else {
-                // Add a new meal.
+                // Add a new article.
                 let newIndexPath = IndexPath(row: articulos.count, section: 0)
                 
                 articulos.append(articulo)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
             
-            // Save the meals.
+            // Save the article.
             saveArticulos()
             
         }
@@ -42,16 +42,16 @@ class ArticuloTableViewController: UITableViewController {
         let photo2 = UIImage(named: "raton")
         let photo3 = UIImage(named: "bate")
         
-        guard let articulo1 = Articulo(name: "Vans Old School",description: "Zapatillas bomba",zone: "Jaen", photo: photo1, rating: 4) else {
-            fatalError("Unable to instantiate meal1")
+        guard let articulo1 = Articulo(name: "Vans Old School",descriptionI: "Zapatillas bomba",zone: "Jaen", photo: photo1, rating: 4) else {
+            fatalError("Unable to instantiate articulo1")
         }
         
-        guard let articulo2 = Articulo(name: "Razer Raton",description: "Raton bomba",zone: "Jaen", photo: photo2, rating: 5) else {
-            fatalError("Unable to instantiate meal2")
+        guard let articulo2 = Articulo(name: "Razer Raton",descriptionI: "Raton bomba",zone: "Jaen", photo: photo2, rating: 5) else {
+            fatalError("Unable to instantiate articulo2")
         }
         
-        guard let articulo3 = Articulo(name: "Bate",description: "Bate bomba",zone: "Jaen", photo: photo3, rating: 3) else {
-            fatalError("Unable to instantiate meal2")
+        guard let articulo3 = Articulo(name: "Bate",descriptionI: "Bate bomba",zone: "Jaen", photo: photo3, rating: 3) else {
+            fatalError("Unable to instantiate articulo3")
         }
         
         articulos += [articulo1, articulo2, articulo3]

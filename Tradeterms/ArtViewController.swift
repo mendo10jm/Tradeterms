@@ -40,6 +40,8 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
             nameTextField.text = articulo.name
             photoImageView.image = articulo.photo
             ratingControl.rating = articulo.rating
+            descriptionTextField.text = articulo.descriptionI
+            zoneTextField.text = articulo.zone
         }
         
         // Enable the Save button only if the text field has a valid Meal name.
@@ -67,7 +69,7 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         dismiss(animated: true, completion: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // The info dictionary may contain multiple representations of the image. You want to use the original.
         guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
@@ -96,13 +98,13 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         }
         
         let name = nameTextField.text ?? ""
-        let description = descriptionTextField.text ?? ""
+        let descriptionI = descriptionTextField.text ?? ""
         let zone = zoneTextField.text ?? ""
         let photo = photoImageView.image
         let rating = ratingControl.rating
         
         // Set the meal to be passed to MealTableViewController after the unwind segue.
-        articulo = Articulo(name: name,description: description,zone: zone, photo: photo, rating: rating)
+        articulo = Articulo(name: name,descriptionI: descriptionI,zone: zone, photo: photo, rating: rating)
     }
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
@@ -121,7 +123,7 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     private func updateSaveButtonState() {
         // Disable the Save button if the text field is empty.
         let text = nameTextField.text ?? ""
-        let description = descriptionTextField.text ?? ""
+        let descriptionI = descriptionTextField.text ?? ""
         let zone = zoneTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
         saveButton.isEnabled = !description.isEmpty
