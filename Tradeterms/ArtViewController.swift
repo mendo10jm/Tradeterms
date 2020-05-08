@@ -81,7 +81,7 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     }
     //MARK: Navigation
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-       dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     

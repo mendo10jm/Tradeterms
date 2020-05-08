@@ -19,6 +19,6 @@ class RViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func GoPPrincipalCrearCuenta(_ sender: Any) {
-        self.performSegue(withIdentifier: "PPrincipalRegistroSegue", sender: self)
+        performSegue(withIdentifier: "PPrincipalRegistroSegue", sender: self)
     }
 }

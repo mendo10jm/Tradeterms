@@ -175,7 +175,7 @@
                     </view>
                     <connections>
                         <segue destination="GbZ-wF-2Jo" kind="show" identifier="RecuperarContrasenaSegue" id="OeT-LA-8M4"/>
-                        <segue destination="zgW-0l-0AC" kind="show" identifier="PPrincipalLoginSegue" id="qrc-pg-pxs"/>
+                        <segue destination="zgW-0l-0AC" kind="presentation" identifier="PPrincipalLoginSegue" id="MM8-Nf-o69"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoO-LO-0cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,7 +376,7 @@
                     <navigationItem key="navigationItem" title="Añadir Artículo" id="xHE-Ht-AN5">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d7c-UR-npy">
                             <connections>
-                                <action selector="cancel:" destination="8LX-p0-XF7" id="G4q-8b-g5R"/>
+                                <action selector="cancel:" destination="8LX-p0-XF7" id="Brb-5o-HYN"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nRH-eQ-MG1">
@@ -402,7 +402,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="7449" y="-1308"/>
+            <point key="canvasLocation" x="6518" y="-1308"/>
         </scene>
         <!--PaginaPrincipal-->
         <scene sceneID="0rd-Y3-dXU">
@@ -526,7 +526,7 @@
                         <viewLayoutGuide key="safeArea" id="aM6-Ey-8Jn"/>
                     </view>
                     <connections>
-                        <segue destination="zgW-0l-0AC" kind="show" identifier="PPrincipalRegistroSegue" id="8PX-N7-GoH"/>
+                        <segue destination="zgW-0l-0AC" kind="presentation" identifier="PPrincipalRegistroSegue" id="59O-Xi-Yx6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGR-fM-CR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -630,6 +630,7 @@
         <!--Pertenencias-->
         <scene sceneID="qJ2-Jt-l29">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-rv-580" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EJc-mf-r9E" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pertenencias" image="Icon-Small-pertenencias" id="U98-Gb-r6k"/>
                     <toolbarItems/>
@@ -639,10 +640,9 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="lCY-NN-v32" kind="relationship" relationship="rootViewController" id="3Pd-yd-n9d"/>
+                        <segue destination="lCY-NN-v32" kind="relationship" relationship="rootViewController" id="DCy-Mg-f6x"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-rv-580" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4661.6000000000004" y="-1308.3958020989505"/>
         </scene>
@@ -691,35 +691,18 @@
                             <outlet property="delegate" destination="lCY-NN-v32" id="uRP-nR-qcb"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Pertenencias" image="Icon-Small-pertenencias" id="NUm-Hd-qrZ"/>
                     <navigationItem key="navigationItem" title="Mis Pertenecias" id="LzE-Y3-7rK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Rt-56-pcu">
                             <connections>
-                                <segue destination="Nvj-jh-a3O" kind="show" identifier="AddItem" id="j1j-32-b4M"/>
+                                <segue destination="8LX-p0-XF7" kind="show" identifier="AddItem" id="qLl-da-yOA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Net-pX-k7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5600.8000000000002" y="-1308.3958020989505"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="5hd-Ij-DAV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nvj-jh-a3O" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GZX-md-qU0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8LX-p0-XF7" kind="relationship" relationship="rootViewController" id="gwm-SA-tXc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbe-1I-NgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6564" y="-1308"/>
+            <point key="canvasLocation" x="5542" y="-1308"/>
         </scene>
     </scenes>
     <resources>
@@ -732,7 +715,7 @@
         <image name="tradeterms" width="222" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qrc-pg-pxs"/>
+        <segue reference="59O-Xi-Yx6"/>
         <segue reference="KUL-tz-lDg"/>
     </inferredMetricsTieBreakers>
 </document>

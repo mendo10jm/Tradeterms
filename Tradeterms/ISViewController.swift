@@ -22,6 +22,6 @@ class ISViewController: UIViewController {
     }
 
     @IBAction func GoPPrincipal(_ sender: Any) {
-        self.performSegue(withIdentifier: "PPrincipalLoginSegue", sender: self)
+        performSegue(withIdentifier: "PPrincipalLoginSegue", sender: self)
     }
 }
