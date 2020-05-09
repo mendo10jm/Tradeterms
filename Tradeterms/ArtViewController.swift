@@ -126,7 +126,7 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         let descriptionI = descriptionTextField.text ?? ""
         let zone = zoneTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
-        saveButton.isEnabled = !description.isEmpty
+        saveButton.isEnabled = !descriptionI.isEmpty
         saveButton.isEnabled = !zone.isEmpty
     }
 }

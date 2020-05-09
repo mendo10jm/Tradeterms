@@ -10,6 +10,8 @@
 		49562C7C2465F3CD00334451 /* ArticuloDeseosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */; };
 		496ADB372464890D006D0105 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496ADB362464890D006D0105 /* RatingControl.swift */; };
 		49BB79262461CCCB00802182 /* RCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB79252461CCCB00802182 /* RCViewController.swift */; };
+		49D4BAD724672C6200A9D839 /* ArtDeseosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D4BAD624672C6200A9D839 /* ArtDeseosViewController.swift */; };
+		49D4BAD92467634400A9D839 /* ArtiucloDeseosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D4BAD82467634400A9D839 /* ArtiucloDeseosTableViewCell.swift */; };
 		D9B0C7D724643E2B00925C91 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7D624643E2B00925C91 /* ArtViewController.swift */; };
 		D9B0C7DB246576D300925C91 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7DA246576D300925C91 /* Articulo.swift */; };
 		D9B0C7DD24657D5600925C91 /* ArticuloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7DC24657D5600925C91 /* ArticuloTableViewCell.swift */; };
@@ -39,6 +41,8 @@
 		49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloDeseosTableViewController.swift; sourceTree = "<group>"; };
 		496ADB362464890D006D0105 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		49BB79252461CCCB00802182 /* RCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCViewController.swift; sourceTree = "<group>"; };
+		49D4BAD624672C6200A9D839 /* ArtDeseosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDeseosViewController.swift; sourceTree = "<group>"; };
+		49D4BAD82467634400A9D839 /* ArtiucloDeseosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtiucloDeseosTableViewCell.swift; sourceTree = "<group>"; };
 		D9B0C7D624643E2B00925C91 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		D9B0C7DA246576D300925C91 /* Articulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
 		D9B0C7DC24657D5600925C91 /* ArticuloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,10 +107,12 @@
 				D9FC19C62458881300A3E9B2 /* ISViewController.swift */,
 				49BB79252461CCCB00802182 /* RCViewController.swift */,
 				D9B0C7D624643E2B00925C91 /* ArtViewController.swift */,
+				49D4BAD624672C6200A9D839 /* ArtDeseosViewController.swift */,
 				496ADB362464890D006D0105 /* RatingControl.swift */,
 				D9B0C7DA246576D300925C91 /* Articulo.swift */,
 				D9B0C7DC24657D5600925C91 /* ArticuloTableViewCell.swift */,
 				D9B0C7DE246581E900925C91 /* ArticuloTableViewController.swift */,
+				49D4BAD82467634400A9D839 /* ArtiucloDeseosTableViewCell.swift */,
 				49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */,
 				D9B78544245820DD000DB5AF /* Main.storyboard */,
 				D9B7854A245820DE000DB5AF /* Assets.xcassets */,
@@ -234,8 +240,10 @@
 				D9FC19C92458903E00A3E9B2 /* RViewController.swift in Sources */,
 				496ADB372464890D006D0105 /* RatingControl.swift in Sources */,
 				D9B0C7DF246581E900925C91 /* ArticuloTableViewController.swift in Sources */,
+				49D4BAD92467634400A9D839 /* ArtiucloDeseosTableViewCell.swift in Sources */,
 				49BB79262461CCCB00802182 /* RCViewController.swift in Sources */,
 				D9B78541245820DD000DB5AF /* AppDelegate.swift in Sources */,
+				49D4BAD724672C6200A9D839 /* ArtDeseosViewController.swift in Sources */,
 				D9B78549245820DD000DB5AF /* Tradeterms.xcdatamodeld in Sources */,
 				D9B0C7DD24657D5600925C91 /* ArticuloTableViewCell.swift in Sources */,
 				49562C7C2465F3CD00334451 /* ArticuloDeseosTableViewController.swift in Sources */,
