@@ -13,6 +13,17 @@ class ArticuloDeseosTableViewController: UITableViewController {
 
     //MARK: Properties
     var articulosDeseos = [Articulo]()
+    
+    //MARK: Actions
+    @IBAction func unwindToArticuloDeseosList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ArtDeseosViewController, let articuloDeseos = sourceViewController.articuloDeseos {
+            //Add a new item
+            let newIndexPath = IndexPath(row: articulosDeseos.count, section: 0)
+            articulosDeseos.append(articuloDeseos)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,10 +52,10 @@ class ArticuloDeseosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Table view cells are reused and should be dequed using a cell identifier
-        let cellIdentifier = "ArticuloTableViewCell"
+        let cellIdentifier = "ArticuloDeseosTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ArticuloTableViewCell else {
-            fatalError("The dequeued cell is not an instance of ArticuloTableViewCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ArticuloDeseosTableViewCell else {
+            fatalError("The dequeued cell is not an instance of ArticuloDeseosTableViewCell")
         }
         
         //Fetches the appropiate article for the data source layout

@@ -1,15 +1,21 @@
 //
-//  ArtiucloDeseosTableViewCell.swift
+//  ArticuloDeseosTableViewCell.swift
 //  Tradeterms
 //
-//  Created by user148597 on 9/5/20.
+//  Created by user148597 on 10/5/20.
 //  Copyright © 2020 JoseManuelYPablo. All rights reserved.
 //
 
 import UIKit
 
-class ArtiucloDeseosTableViewCell: UITableViewCell {
-
+class ArticuloDeseosTableViewCell: UITableViewCell {
+    
+    //MARK: Properties
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

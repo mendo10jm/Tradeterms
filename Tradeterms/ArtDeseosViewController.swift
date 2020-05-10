@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //MARK: Properties
@@ -15,6 +16,9 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
     @IBOutlet weak var zoneTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var articuloDeseos: Articulo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +38,27 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
         navigationItem.title = textField.text
     }
     
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // This method lets you configure a view controller before it's presented.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        //Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        let name = nameTextField.text ?? ""
+        let descriptionI = descriptionTextField.text ?? ""
+        let zone = zoneTextField.text ?? ""
+        let photo = photoImageView.image
+        let rating = ratingControl.rating
+        
+        //Set the article to be passed to ArticuloDeseosTableViewController after the unwind segue.
+        articuloDeseos = Articulo(name: name, descriptionI: descriptionI, zone: zone, photo: photo, rating: rating)
     }
-    */
+    
     
     //MARK: UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
