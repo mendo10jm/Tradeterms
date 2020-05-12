@@ -17,21 +17,34 @@ class ArticuloDeseosTableViewController: UITableViewController {
     //MARK: Actions
     @IBAction func unwindToArticuloDeseosList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? ArtDeseosViewController, let articuloDeseos = sourceViewController.articuloDeseos {
+            if let selectedIndexPathDeseos = tableView.indexPathForSelectedRow {
+                //Update an existing meal
+                articulosDeseos[selectedIndexPathDeseos.row] = articuloDeseos
+                tableView.reloadRows(at: [selectedIndexPathDeseos], with: .none)
+            } else {
             //Add a new item
             let newIndexPath = IndexPath(row: articulosDeseos.count, section: 0)
             articulosDeseos.append(articuloDeseos)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+            //Save the articulosdeseos
+            saveArticuloDeseos()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Use the edit button item provided by the table view controller
+        navigationItem.leftBarButtonItem = editButtonItem
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //Load any saved meals, otherwise load sample data.
+        if let savedArticulosDeseos = loadArticulosDeseos() {
+            articulosDeseos += savedArticulosDeseos
+        } else {
+            //Load sample data
+            loadSampleArtDeseos()
+        }
         
         //Loading sample data
         loadSampleArtDeseos()
@@ -69,25 +82,27 @@ class ArticuloDeseosTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            articulosDeseos.remove(at: indexPath.row)
+            saveArticuloDeseos()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -104,15 +119,35 @@ class ArticuloDeseosTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        switch(segue.identifier ?? "") {
+        case "AddItemDeseos":
+            os_log("Adding a new item to deseos.", log: OSLog.default, type: .debug)
+        
+        case "ShowDetailDeseos":
+            guard let articuloDeseosDetailViewController = segue.destination as? ArtDeseosViewController
+                else {
+                    fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let selectedArticuloDeseosCell = sender as? ArticuloDeseosTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            guard let indexPathDeseos = tableView.indexPath(for: selectedArticuloDeseosCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            let selectedArticuloDeseos = articulosDeseos[indexPathDeseos.row]
+            articuloDeseosDetailViewController.articuloDeseos = selectedArticuloDeseos
+        
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
     }
-    */
+ 
     //MARK: Private Mathods
     private func loadSampleArtDeseos(){
         let fotoDeseos1 = UIImage(named: "gameboy")
@@ -129,5 +164,18 @@ class ArticuloDeseosTableViewController: UITableViewController {
             fatalError("No se pudo cargar el item 3")
         }
         articulosDeseos += [artDeseos1, artDeseos2, artDeseos3]
+    }
+    
+    private func saveArticuloDeseos() {
+        let isSuccesfulSaveDeseos = NSKeyedArchiver.archiveRootObject(articulosDeseos, toFile: Articulo.ArchiveURL.path)
+        if isSuccesfulSaveDeseos {
+            os_log("Articulo deseos succesfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadArticulosDeseos() -> [Articulo]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Articulo.ArchiveURL.path) as? [Articulo]
     }
 }

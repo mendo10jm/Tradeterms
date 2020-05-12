@@ -25,6 +25,19 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
 
         // Handle the text field's user input through delegate callbacks.
         nameTextField.delegate = self
+        
+        //Set up views if editing an existing articulo.
+        if let articuloD = articuloDeseos {
+            navigationItem.title = articuloD.name
+            nameTextField.text = articuloD.name
+            photoImageView.image = articuloD.photo
+            ratingControl.rating = articuloD.rating
+            descriptionTextField.text = articuloD.descriptionI
+            zoneTextField.text = articuloD.zone
+        }
+        
+        //Enable the Save button only if the text field has a valid Meal name.
+        updateSaveButtonState()
     }
     
     //MARK: UITextFieldDelegate
@@ -34,13 +47,32 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //Disable the Save button while editing
+        saveButton.isEnabled = false
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
         navigationItem.title = textField.text
     }
     
     
     // MARK: - Navigation
-
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        //Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed i two different ways.
+        let isPresentingAddArticuloDeseosMode = presentingViewController is UINavigationController
+        if isPresentingAddArticuloDeseosMode {
+            dismiss(animated: true, completion: nil)
+        } else if let owningNavigationControllerDeseos = navigationController {
+            owningNavigationControllerDeseos.popViewController(animated: true)
+        } else {
+            fatalError("The ArtDeseosViewController is not inside a navigation controller.")
+        }
+    }
+    
     // This method lets you configure a view controller before it's presented.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -91,6 +123,10 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
-    
-
+    //MARK: Private methods
+    private func updateSaveButtonState() {
+        //Disable the Save button if the text field is empty
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
 }

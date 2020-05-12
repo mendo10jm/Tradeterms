@@ -84,6 +84,16 @@ class ArtViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     //MARK: Navigation
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        //Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed i two different ways.
+        let isPresentingAddArticuloMode = presentingViewController is UINavigationController
+        if isPresentingAddArticuloMode {
+            dismiss(animated: true, completion: nil)
+        } else if let owningNavigationController = navigationController {
+            owningNavigationController.popViewController(animated: true)
+        } else {
+            fatalError("The ArtDeseosViewController is not inside a navigation controller.")
+        }
     }
     
     

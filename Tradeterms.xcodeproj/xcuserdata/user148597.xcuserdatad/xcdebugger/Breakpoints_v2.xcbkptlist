@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tradeterms/ArticuloDeseosTableViewController.swift"
-            timestampString = "610839997.246771"
+            timestampString = "611007148.949056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "ArticuloDeseosTableViewController"
-            landmarkType = "3">
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
