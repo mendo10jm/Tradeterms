@@ -18,11 +18,13 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
     @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    var articuloDeseos: Articulo?
+    var articuloDeseos: ArticuloDeseo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        photoImageView.isUserInteractionEnabled = true;
+        
         // Handle the text field's user input through delegate callbacks.
         nameTextField.delegate = self
         
@@ -88,7 +90,7 @@ class ArtDeseosViewController: UIViewController, UITextFieldDelegate, UIImagePic
         let rating = ratingControl.rating
         
         //Set the article to be passed to ArticuloDeseosTableViewController after the unwind segue.
-        articuloDeseos = Articulo(name: name, descriptionI: descriptionI, zone: zone, photo: photo, rating: rating)
+        articuloDeseos = ArticuloDeseo(name: name, descriptionI: descriptionI, zone: zone, photo: photo, rating: rating)
     }
     
     

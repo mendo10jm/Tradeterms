@@ -12,7 +12,7 @@ import os.log
 class ArticuloDeseosTableViewController: UITableViewController {
 
     //MARK: Properties
-    var articulosDeseos = [Articulo]()
+    var articulosDeseos = [ArticuloDeseo]()
     
     //MARK: Actions
     @IBAction func unwindToArticuloDeseosList(sender: UIStoryboardSegue) {
@@ -46,8 +46,6 @@ class ArticuloDeseosTableViewController: UITableViewController {
             loadSampleArtDeseos()
         }
         
-        //Loading sample data
-        loadSampleArtDeseos()
     }
 
     // MARK: - Table view data source
@@ -150,24 +148,11 @@ class ArticuloDeseosTableViewController: UITableViewController {
  
     //MARK: Private Mathods
     private func loadSampleArtDeseos(){
-        let fotoDeseos1 = UIImage(named: "gameboy")
-        let fotoDeseos2 = UIImage(named: "zapas")
-        let fotoDeseos3 = UIImage(named: "reloj")
-        
-        guard let artDeseos1 = Articulo(name: "Game Boy Advance", descriptionI: "GB Advance de 2002 casi nueva a poder ser y en color azul" , zone: "Jaen", photo: fotoDeseos1, rating: 4) else {
-            fatalError("No se pudo cargar el item 1")
-        }
-        guard let artDeseos2 = Articulo(name: "Nike Hypervenom", descriptionI: "Zapatillas nike de 2013, con tacos" , zone: "Jaen", photo: fotoDeseos2, rating: 5) else {
-            fatalError("No se pudo cargar el item 1")
-        }
-        guard let artDeseos3 = Articulo(name: "Apple Watch Series 3", descriptionI: "iWatch Series 3, no importa el uso, color negro" , zone: "Jaen", photo: fotoDeseos3, rating: 2) else {
-            fatalError("No se pudo cargar el item 3")
-        }
-        articulosDeseos += [artDeseos1, artDeseos2, artDeseos3]
+       
     }
     
     private func saveArticuloDeseos() {
-        let isSuccesfulSaveDeseos = NSKeyedArchiver.archiveRootObject(articulosDeseos, toFile: Articulo.ArchiveURL.path)
+        let isSuccesfulSaveDeseos = NSKeyedArchiver.archiveRootObject(articulosDeseos, toFile: ArticuloDeseo.ArchiveURL.path)
         if isSuccesfulSaveDeseos {
             os_log("Articulo deseos succesfully saved.", log: OSLog.default, type: .debug)
         } else {
@@ -175,7 +160,7 @@ class ArticuloDeseosTableViewController: UITableViewController {
         }
     }
     
-    private func loadArticulosDeseos() -> [Articulo]? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Articulo.ArchiveURL.path) as? [Articulo]
+    private func loadArticulosDeseos() -> [ArticuloDeseo]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: ArticuloDeseo.ArchiveURL.path) as? [ArticuloDeseo]
     }
 }

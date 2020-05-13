@@ -1,15 +1,15 @@
 //
-//  Articulo.swift
+//  ArticuloDeseo.swift
 //  Tradeterms
 //
-//  Created by Jose Manuel Mendoza Marín on 08/05/2020.
+//  Created by Jose Manuel Mendoza Marín on 13/05/2020.
 //  Copyright © 2020 JoseManuelYPablo. All rights reserved.
 //
 
 import UIKit
 import os.log
 
-class Articulo: NSObject, NSCoding {
+class ArticuloDeseo: NSObject, NSCoding {
     //MARK: Properties
     struct PropertyKey {
         static let name = "name"
@@ -61,7 +61,7 @@ class Articulo: NSObject, NSCoding {
     //MARK: Archiving Paths
     
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("Articulos")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("Deseos")
     
     
     //MARK: Initialization
@@ -92,6 +92,6 @@ class Articulo: NSObject, NSCoding {
         self.photo = photo
         self.rating = rating
         
-       
+        
     }
 }

@@ -38,23 +38,7 @@ class ArticuloTableViewController: UITableViewController {
     //MARK: Private Methods
     
     private func loadSampleArticulos() {
-        let photo1 = UIImage(named: "vans")
-        let photo2 = UIImage(named: "raton")
-        let photo3 = UIImage(named: "bate")
         
-        guard let articulo1 = Articulo(name: "Vans Old School",descriptionI: "Zapatillas bomba",zone: "Jaen", photo: photo1, rating: 4) else {
-            fatalError("Unable to instantiate articulo1")
-        }
-        
-        guard let articulo2 = Articulo(name: "Razer Raton",descriptionI: "Raton bomba",zone: "Jaen", photo: photo2, rating: 5) else {
-            fatalError("Unable to instantiate articulo2")
-        }
-        
-        guard let articulo3 = Articulo(name: "Bate",descriptionI: "Bate bomba",zone: "Jaen", photo: photo3, rating: 3) else {
-            fatalError("Unable to instantiate articulo3")
-        }
-        
-        articulos += [articulo1, articulo2, articulo3]
     }
     
     override func viewDidLoad() {
