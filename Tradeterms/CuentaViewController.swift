@@ -17,12 +17,13 @@ class CuentaViewController: UIViewController {
     }
     
     //MARK: Actions
-
+    // Boton que redirecciona a ajustes
     @IBAction func GoSettings(_ sender: Any) {
         if let url = NSURL(string: UIApplication.openSettingsURLString) as URL? {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+    // Boton que redirecciona a ajustes
     @IBAction func GosettingsSec(_ sender: Any) {
         if let url = NSURL(string: UIApplication.openSettingsURLString) as URL? {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)

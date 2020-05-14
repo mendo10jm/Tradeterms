@@ -9,7 +9,7 @@
 import UIKit
 import os.log
 
-class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating{
+class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating,OptionButtonsDelegate1{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,10 +18,12 @@ class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDa
     var resultsController = UITableViewController()
     
     //MARK: Properties
-    var articulosDeseos = [ArticuloDeseo]()
+    var articulosDeseos = [ArticuloDeseo]()//array con todos los articulos
     
-    var filteredarticulo = [ArticuloDeseo]()
-        
+    var filteredarticulo = [ArticuloDeseo]()//array con los articulos filtrados
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,10 @@ class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDa
         
 
         // Do any additional setup after loading the view.
+    }
+    //MARK: Action
+    
+    @IBAction func GoContact(_ sender: Any) {
     }
     // MARK: - Table view data source
     
@@ -82,6 +88,10 @@ class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDa
             cell.ratingControl.rating = articuloDeseos.rating
         }
         
+        //Delegate para abrir IMessage
+        cell.delegate = self
+        cell.indexPath = indexPath
+        
         return cell
     }
     
@@ -108,6 +118,7 @@ class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDa
     
     func updateSearchResults(for searchController: UISearchController) {
         
+        //filtramso por nobre de articulo
         self.filteredarticulo = self.articulosDeseos.filter { (art: ArticuloDeseo) -> Bool in
             if art.name.lowercased().contains(self.searchController.searchBar.text!.lowercased()){
                 return true
@@ -117,6 +128,12 @@ class BuscarViewController: UIViewController ,UITableViewDelegate, UITableViewDa
         }
         
         self.resultsController.tableView.reloadData()
+    }
+    
+    func ConectTapped(at index: IndexPath) {
+        let sms: String = "sms:+689356788&body=Hola, Me interesa tu articulo"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
 
 }

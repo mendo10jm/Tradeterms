@@ -1050,7 +1050,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxj-O1-apM">
-                                                    <rect key="frame" x="109" y="11" width="251" height="21"/>
+                                                    <rect key="frame" x="109" y="11" width="204" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1060,9 +1060,18 @@
                                                     <rect key="frame" x="108" y="40" width="252" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tem-q2-62s">
+                                                    <rect key="frame" x="317" y="6" width="55" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Contact"/>
+                                                    <connections>
+                                                        <action selector="ContactAction:" destination="iAK-p4-KQQ" eventType="touchUpInside" id="8JF-oG-LCZ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="Contactbtn" destination="Tem-q2-62s" id="4c9-9X-PoN"/>
                                             <outlet property="nameLabel" destination="Uxj-O1-apM" id="kru-b6-dEI"/>
                                             <outlet property="photoImageView" destination="gen-he-tJc" id="9kS-Yi-7qR"/>
                                             <outlet property="ratingControl" destination="aNe-8x-ypo" id="zB7-ph-d6Z"/>
@@ -1306,22 +1315,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fda-mi-0h4">
-                                <rect key="frame" x="20" y="475" width="252" height="85"/>
+                                <rect key="frame" x="20" y="475" width="286.5" height="91"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado del artículo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-ZK-XLr">
-                                        <rect key="frame" x="0.0" y="0.0" width="252" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="286.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="io5-bG-GaY" userLabel="Rating" customClass="RatingControl" customModule="Tradeterms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20.5" width="252" height="44"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="286.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="io5-bG-GaY" secondAttribute="height" multiplier="63:11" id="4Mx-wA-g8g"/>
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zona" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-gl-2RW">
-                                        <rect key="frame" x="0.0" y="64.5" width="252" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="286.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1329,7 +1338,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Escriba su Zona" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmI-BY-tfe">
-                                <rect key="frame" x="20" y="568" width="335" height="30"/>
+                                <rect key="frame" x="20" y="574" width="335" height="30"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

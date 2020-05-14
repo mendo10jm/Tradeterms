@@ -17,7 +17,7 @@ class PerfilViewController: UIViewController {
     }
      //MARK: Actions
     
-    //abre la seccion de aplicaciones disponibles para enviar un mensage, se selecciona y se envia.
+    //abre la seccion de aplicaciones disponibles para enviar un mensage, se selecciona y se envia.(invitar amigo)
     @IBAction func ShareLink(_ sender: Any) {
         //Set the default sharing message.
         let message = "Hola, te invito a que veas esta nueva aplicación que he descubierto"

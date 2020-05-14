@@ -17,6 +17,7 @@ class AyudaViewController: UIViewController {
     }
     //MARK: Actions
 
+    //t¡redirecciona a la supuesta pagina web
     @IBAction func GoPreguntasFrecuentes(_ sender: Any) {
         if let url = URL(string: "http://Tradeterms-Preguntas.com") {
             UIApplication.shared.open(url, options: [:])

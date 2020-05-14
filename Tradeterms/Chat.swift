@@ -14,7 +14,7 @@ class Chat: NSObject, NSCoding {
     struct PropertyKey {
         static let name = "name"
          static let photo = "photo"
-        static let last = "description"
+        static let last = "last"
 
     }
     var name: String
