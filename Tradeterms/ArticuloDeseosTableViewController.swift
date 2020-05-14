@@ -133,7 +133,7 @@ class ArticuloDeseosTableViewController: UITableViewController {
                     fatalError("Unexpected destination: \(segue.destination)")
             }
             guard let selectedArticuloDeseosCell = sender as? ArticuloDeseosTableViewCell else {
-                fatalError("Unexpected sender: \(sender)")
+                fatalError("Unexpected sender: \(String(describing: sender))")
             }
             guard let indexPathDeseos = tableView.indexPath(for: selectedArticuloDeseosCell) else {
                 fatalError("The selected cell is not being displayed by the table")
@@ -142,7 +142,7 @@ class ArticuloDeseosTableViewController: UITableViewController {
             articuloDeseosDetailViewController.articuloDeseos = selectedArticuloDeseos
         
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
  

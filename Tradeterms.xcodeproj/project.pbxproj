@@ -16,6 +16,11 @@
 		D9434F8A246C615800560CEA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F89246C615800560CEA /* Chat.swift */; };
 		D9434F8C246C616D00560CEA /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F8B246C616D00560CEA /* ChatTableViewCell.swift */; };
 		D9434F8E246C617700560CEA /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F8D246C617700560CEA /* ChatTableViewController.swift */; };
+		D9434F90246D603D00560CEA /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F8F246D603D00560CEA /* PerfilViewController.swift */; };
+		D9434F92246D61EB00560CEA /* CuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F91246D61EB00560CEA /* CuentaViewController.swift */; };
+		D9434F94246D6E3900560CEA /* AyudaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F93246D6E3900560CEA /* AyudaViewController.swift */; };
+		D9434F96246D87E400560CEA /* BuscarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F95246D87E400560CEA /* BuscarViewController.swift */; };
+		D9434F98246D895D00560CEA /* BusquedaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9434F97246D895D00560CEA /* BusquedaTableViewCell.swift */; };
 		D9B0C7D724643E2B00925C91 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7D624643E2B00925C91 /* ArtViewController.swift */; };
 		D9B0C7DB246576D300925C91 /* Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7DA246576D300925C91 /* Articulo.swift */; };
 		D9B0C7DD24657D5600925C91 /* ArticuloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B0C7DC24657D5600925C91 /* ArticuloTableViewCell.swift */; };
@@ -43,20 +48,25 @@
 
 /* Begin PBXFileReference section */
 		490D0B5C2468A35800E0521D /* ArticuloDeseosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloDeseosTableViewCell.swift; sourceTree = "<group>"; };
-		49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloDeseosTableViewController.swift; sourceTree = "<group>"; };
+		49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloDeseosTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		496ADB362464890D006D0105 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		49BB79252461CCCB00802182 /* RCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCViewController.swift; sourceTree = "<group>"; };
 		49D4BAD624672C6200A9D839 /* ArtDeseosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDeseosViewController.swift; sourceTree = "<group>"; };
 		D9434F87246C5ADC00560CEA /* ArticuloDeseo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloDeseo.swift; sourceTree = "<group>"; };
 		D9434F89246C615800560CEA /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
-		D9434F8B246C616D00560CEA /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
-		D9434F8D246C617700560CEA /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		D9434F8B246C616D00560CEA /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D9434F8D246C617700560CEA /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D9434F8F246D603D00560CEA /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		D9434F91246D61EB00560CEA /* CuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuentaViewController.swift; sourceTree = "<group>"; };
+		D9434F93246D6E3900560CEA /* AyudaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyudaViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D9434F95246D87E400560CEA /* BuscarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D9434F97246D895D00560CEA /* BusquedaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusquedaTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D9B0C7D624643E2B00925C91 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		D9B0C7DA246576D300925C91 /* Articulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articulo.swift; sourceTree = "<group>"; };
 		D9B0C7DC24657D5600925C91 /* ArticuloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloTableViewCell.swift; sourceTree = "<group>"; };
 		D9B0C7DE246581E900925C91 /* ArticuloTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloTableViewController.swift; sourceTree = "<group>"; };
 		D9B7853D245820DD000DB5AF /* Tradeterms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tradeterms.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9B78540245820DD000DB5AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9B78540245820DD000DB5AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D9B78542245820DD000DB5AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B78545245820DD000DB5AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B78548245820DD000DB5AF /* Tradeterms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tradeterms.xcdatamodel; sourceTree = "<group>"; };
@@ -121,11 +131,16 @@
 				D9B0C7DC24657D5600925C91 /* ArticuloTableViewCell.swift */,
 				D9B0C7DE246581E900925C91 /* ArticuloTableViewController.swift */,
 				D9434F87246C5ADC00560CEA /* ArticuloDeseo.swift */,
-				49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */,
 				490D0B5C2468A35800E0521D /* ArticuloDeseosTableViewCell.swift */,
+				49562C7B2465F3CD00334451 /* ArticuloDeseosTableViewController.swift */,
+				D9434F95246D87E400560CEA /* BuscarViewController.swift */,
+				D9434F97246D895D00560CEA /* BusquedaTableViewCell.swift */,
 				D9434F89246C615800560CEA /* Chat.swift */,
 				D9434F8B246C616D00560CEA /* ChatTableViewCell.swift */,
 				D9434F8D246C617700560CEA /* ChatTableViewController.swift */,
+				D9434F91246D61EB00560CEA /* CuentaViewController.swift */,
+				D9434F8F246D603D00560CEA /* PerfilViewController.swift */,
+				D9434F93246D6E3900560CEA /* AyudaViewController.swift */,
 				D9B78544245820DD000DB5AF /* Main.storyboard */,
 				D9B7854A245820DE000DB5AF /* Assets.xcassets */,
 				D9B7854C245820DE000DB5AF /* LaunchScreen.storyboard */,
@@ -194,6 +209,14 @@
 				TargetAttributes = {
 					D9B7853C245820DD000DB5AF = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					D9B78553245820DE000DB5AF = {
 						CreatedOnToolsVersion = 10.0;
@@ -249,18 +272,23 @@
 				D9B0C7D724643E2B00925C91 /* ArtViewController.swift in Sources */,
 				D9FC19C72458881300A3E9B2 /* ISViewController.swift in Sources */,
 				D9B78543245820DD000DB5AF /* HomeViewController.swift in Sources */,
+				D9434F92246D61EB00560CEA /* CuentaViewController.swift in Sources */,
 				D9FC19C92458903E00A3E9B2 /* RViewController.swift in Sources */,
 				D9434F8A246C615800560CEA /* Chat.swift in Sources */,
 				496ADB372464890D006D0105 /* RatingControl.swift in Sources */,
+				D9434F96246D87E400560CEA /* BuscarViewController.swift in Sources */,
 				D9B0C7DF246581E900925C91 /* ArticuloTableViewController.swift in Sources */,
 				D9434F88246C5ADC00560CEA /* ArticuloDeseo.swift in Sources */,
 				49BB79262461CCCB00802182 /* RCViewController.swift in Sources */,
 				D9B78541245820DD000DB5AF /* AppDelegate.swift in Sources */,
+				D9434F94246D6E3900560CEA /* AyudaViewController.swift in Sources */,
+				D9434F90246D603D00560CEA /* PerfilViewController.swift in Sources */,
 				D9434F8E246C617700560CEA /* ChatTableViewController.swift in Sources */,
 				49D4BAD724672C6200A9D839 /* ArtDeseosViewController.swift in Sources */,
 				D9434F8C246C616D00560CEA /* ChatTableViewCell.swift in Sources */,
 				D9B78549245820DD000DB5AF /* Tradeterms.xcdatamodeld in Sources */,
 				D9B0C7DD24657D5600925C91 /* ArticuloTableViewCell.swift in Sources */,
+				D9434F98246D895D00560CEA /* BusquedaTableViewCell.swift in Sources */,
 				49562C7C2465F3CD00334451 /* ArticuloDeseosTableViewController.swift in Sources */,
 				490D0B5D2468A35800E0521D /* ArticuloDeseosTableViewCell.swift in Sources */,
 			);

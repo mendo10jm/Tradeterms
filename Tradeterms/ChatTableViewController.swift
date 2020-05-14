@@ -8,7 +8,15 @@
 
 import UIKit
 
-class ChatTableViewController: UITableViewController {
+class ChatTableViewController: UITableViewController, OptionButtonsDelegate {
+    
+//    función que abre IMesage y enviaria ese mensage, pero en el simulador simplemente abre IMessage
+    func VerTapped(at index: IndexPath) {
+        let sms: String = "sms:+689356788&body=Hola, Me interesa tu articulo"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    }
+    
     
     var chats = [Chat]()
     
@@ -23,7 +31,7 @@ class ChatTableViewController: UITableViewController {
             fatalError("Unable to instantiate usu1")
         }
         
-        guard let usu2 = Chat(name: "Manuela",last: "10 euros",photo: photo2) else {
+        guard let usu2 = Chat(name: "Manuela",last: "¿Donde Quedamos?",photo: photo2) else {
             fatalError("Unable to instantiate usu2")
         }
         
@@ -31,7 +39,7 @@ class ChatTableViewController: UITableViewController {
             fatalError("Unable to instantiate usu3")
         }
         
-        chats += [usu1, usu2, usu3]
+        chats += [usu2,usu1, usu3]
     }
 
     override func viewDidLoad() {
@@ -73,9 +81,14 @@ class ChatTableViewController: UITableViewController {
         cell.photoChatUsu.image = chat.photo
         cell.lastMesageChatLabel.text = chat.last
         
+        cell.delegate = self
+        cell.indexPath = indexPath
+        
         return cell
     }
 
+    // MARK: - Action
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
